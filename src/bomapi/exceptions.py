@@ -21,7 +21,3 @@ class ResultNotFound(BomAPIError):
     """
     Item was not found result
     """
-
-    def __init__(self, message: str, response: httpx.Response):
-        self.message = message
-        self.response = response

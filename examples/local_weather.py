@@ -3,7 +3,7 @@ from pprint import pprint
 import bomapi
 
 # Find a location
-results = bomapi.location_search("Cordeaux Heights")
+results = bomapi.location_search("Wollongong")
 result = results[0]
 pprint(result)
 
