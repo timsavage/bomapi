@@ -1,16 +1,14 @@
 from pprint import pprint
 
-from pybomapi import LocationResult, Location
+import bomapi
 
-# print(location_search("Cordeaux Heights"))
-l = LocationResult(
-    geohash="r3gk01s",
-    id="Cordeaux Heights-r3gk01s",
-    name="Cordeaux Heights",
-    postcode="2526",
-    state="NSW",
-)
-location = Location(l)
+# Find a location
+results = bomapi.location_search("Cordeaux Heights")
+result = results[0]
+pprint(result)
+
+# Create a location instance and query local info
+location = bomapi.Location(result)
 pprint(location.info())
 pprint(location.warnings())
 pprint(location.observations())
